@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 
 # - Brendan McCann
-# - 14/07/22
+# - Conceived - 14/07/22
 # - Multi-Threaded Port Scanner
+
+# TODO
+# Handle multiple targets (test multiprocessing?)
+# Remodel into class
+
 
 import socket
 import time
