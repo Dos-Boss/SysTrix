@@ -15,7 +15,6 @@ def getArgs():
     (options, args) = parser.parse_args()
     return options
 
-
 def scan(ip_address):
     arp_request = scapy.ARP(pdst=ip_address)
     broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
@@ -29,7 +28,6 @@ def scan(ip_address):
 
     return lstClients
 
-
 def printResults(lstResults):
     print("-----------------------------------------------------")
     print("IP\t\tMAC Address\t\tHostname")
@@ -42,7 +40,6 @@ def printResults(lstResults):
             print(client["ip"] + "\t" + client["mac"].upper() + "\t" + socket.gethostbyaddr(client["ip"])[0])
         except socket.herror:
             print(client["ip"] + "\t" + client["mac"].upper() + "\t" + "UNKNOWN")
-
 
 options = getArgs()
 

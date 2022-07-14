@@ -1,2 +1,4 @@
 # SysTrix
-DEV ENV
+Developing trix for the future.
+systrix.org
+\m/ - stay toasty
