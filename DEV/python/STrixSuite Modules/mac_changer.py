@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # - Brendan McCann
-# - 21/03/2021
+# - Conceived - 21/03/2021
 # - MAC address changer
 
 import subprocess
