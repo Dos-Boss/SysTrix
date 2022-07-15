@@ -89,11 +89,6 @@ def main():
 main()
 
 
-# for x in range(thread_count):
-#     t = threading.Thread(target=threader)
-#     t.daemon = True
-#     t.start()
-
 # if "," in targets:
 #     for ip in targets.split(","):
 #         q.put((ip.strip(' ')))
