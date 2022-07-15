@@ -7,6 +7,7 @@
 # TODO
 # Handle multiple targets (test multiprocessing?)
 # Remodel into class
+# Log exceptions
 
 
 import socket
@@ -16,7 +17,7 @@ from queue import Queue
 from IPy import IP
 
 targets = input("Please enter target/s to scan: ")
-port_range = 500
+port_range = 1000
 
 thread_count = 1024
 print_lock = threading.Lock()
@@ -32,7 +33,7 @@ def checkIP(ip):
 
 def getBanner(sock):
     try:
-        recv = sock.recv(1024).decode().strip("\n")
+        recv = sock.recv(1024).decode().strip("\n").strip("\r")
         return recv
     except sock.timeout:
         return ""
@@ -57,10 +58,10 @@ def portscan(port):
         with print_lock:
             try:
                 banner_con = banner_sock.connect((targets, port))
-                banner = getBanner(banner_sock)
+                banner = sock.recv(1024).decode().strip("\n").strip("\r")
                 print("[*] Port " + str(port) + " is open: " + banner)
                 banner_con.close()
-            except TypeError:
+            except Exception:
                 pass
             
             print("[*] Port " + str(port) + " is open")

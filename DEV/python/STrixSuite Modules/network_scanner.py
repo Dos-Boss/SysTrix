@@ -26,7 +26,7 @@ def scan(ip_address):
         dictClient = {"ip": result[1].psrc, "mac": result[1].hwsrc}
         lstClients.append(dictClient)
 
-    return lstClients
+    return lstResults
 
 def printResults(lstResults):
     print("-----------------------------------------------------")
