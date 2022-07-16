@@ -43,7 +43,7 @@ def portscan(port):
     banner_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     
     banner_sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
-    banner_sock.settimeout(0.5)
+    banner_sock.settimeout(1)
     banner = ""
     try:
         con = scan_sock.connect((targets, port))
@@ -55,7 +55,7 @@ def portscan(port):
             banner_con.close()
         except Exception:
             pass 
-        print("[*] Port " + str(port) + " is open: " + banner)
+        print("[*] Port " + str(port) + " is open" + ": " + banner)
         con.close()    
     except Exception:
         pass
