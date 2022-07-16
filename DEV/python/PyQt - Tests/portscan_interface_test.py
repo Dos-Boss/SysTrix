@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
         self.textBrowser.setGeometry(QtCore.QRect(130, 200, 371, 350))
         self.textBrowser.setStyleSheet("background-color: rgb(40, 40, 40);\n"
-                                        "selection-background-color: rgb(255, 0, 0);\n"
+                                        "selection-background-color: rgb(101, 0, 152);\n"
                                         "gridline-color: rgb(255, 0, 0);")
         self.textBrowser.setAcceptRichText(True)
         self.textBrowser.setObjectName("textBrowser")
