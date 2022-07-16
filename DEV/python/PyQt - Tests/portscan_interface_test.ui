@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>620</width>
-    <height>453</height>
+    <height>496</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>130</y>
+      <y>160</y>
       <width>281</width>
       <height>31</height>
      </rect>
@@ -42,7 +42,7 @@ gridline-color: rgb(46, 156, 60);</string>
     <property name="geometry">
      <rect>
       <x>420</x>
-      <y>130</y>
+      <y>160</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -65,7 +65,7 @@ gridline-color: rgb(46, 156, 60);</string>
       <x>130</x>
       <y>0</y>
       <width>371</width>
-      <height>121</height>
+      <height>151</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -83,7 +83,8 @@ hr { height: 1px; border-width: 0; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; color:#26be00;&quot;&gt; /        \___  |\___ \  |    |   |  | \/  |&amp;gt;    &amp;lt; &lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; color:#26be00;&quot;&gt;/_______  / ____/____  &amp;gt; |____|   |__|  |__/__/\_ \&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; color:#26be00;&quot;&gt;        \/\/         \/                          \/&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14px; font-weight:700; color:#26be00;&quot;&gt;© &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New'; color:#26be00;&quot;&gt;SysTrix - System Trickology, Evolved&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:14px; font-weight:700; color:#26be00;&quot;&gt;© &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New'; color:#26be00;&quot;&gt;SysTrix 2022&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; color:#26be00;&quot;&gt;System Trickology - Evolved.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="textFormat">
      <enum>Qt::RichText</enum>
@@ -96,7 +97,7 @@ hr { height: 1px; border-width: 0; }
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>170</y>
+      <y>200</y>
       <width>371</width>
       <height>231</height>
      </rect>
