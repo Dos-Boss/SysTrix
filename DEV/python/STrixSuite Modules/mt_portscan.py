@@ -17,7 +17,7 @@ from queue import Queue
 from IPy import IP
 
 targets = input("Please enter target/s to scan: ")
-port_range = 1000
+port_range = 1024
 
 thread_count = 1024
 print_lock = threading.Lock()
@@ -30,13 +30,6 @@ def checkIP(ip):
         return(ip)
     except ValueError:
         return socket.gethostbyname(ip)
-
-def getBanner(sock):
-    try:
-        recv = sock.recv(1024).decode().strip("\n").strip("\r")
-        return recv
-    except sock.timeout:
-        return ""
 
 def threader():
     while True:
@@ -51,22 +44,19 @@ def portscan(port):
     
     banner_sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
     banner_sock.settimeout(0.5)
-    
+    banner = ""
     try:
         con = scan_sock.connect((targets, port))
             
-        with print_lock:
-            try:
-                banner_con = banner_sock.connect((targets, port))
-                banner = sock.recv(1024).decode().strip("\n").strip("\r")
-                print("[*] Port " + str(port) + " is open: " + banner)
-                banner_con.close()
-            except Exception:
-                pass
-            
-            print("[*] Port " + str(port) + " is open")
-        con.close()
-        
+        #with print_lock:
+        try:
+            banner_con = banner_sock.connect((targets, port))
+            banner = banner_sock.recv(1024).decode().strip("\n").strip("\r")
+            banner_con.close()
+        except Exception:
+            pass 
+        print("[*] Port " + str(port) + " is open: " + banner)
+        con.close()    
     except Exception:
         pass
 
