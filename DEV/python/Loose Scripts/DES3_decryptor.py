@@ -25,7 +25,6 @@ def get_args():
         exit()
     return usr_keys
 
-
 def init():
     global session_key
 
@@ -43,7 +42,6 @@ def init():
     else:
         drive_to_scan_nix()
     return
-
 
 def drive_to_scan_win():
     global drive
@@ -67,14 +65,12 @@ def drive_to_scan_win():
         drive = drive_adj
     return
 
-
 def drive_to_scan_nix():
     # TODO: List mount points instead of defaulting to root scan.
     global drive
     drive = []
     drive.append("/")
     return
-
 
 def decryptor(in_file):
     ifile = open(in_file, 'rb')
@@ -83,13 +79,11 @@ def decryptor(in_file):
     data = cipher_des3.decrypt(ifile.read())
     return data.decode()
 
-
 def write_file(file, data):
     ofile = open(file[:-4], 'w')
     ofile.write(data)
     ofile.close()
     return
-
 
 def main():
     init()
