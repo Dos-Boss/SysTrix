@@ -48,13 +48,13 @@ def portscan(port):
     try:
         con = scan_sock.connect((targets, port))
             
-        #with print_lock:
-        try:
-            banner_con = banner_sock.connect((targets, port))
-            banner = banner_sock.recv(1024).decode().strip("\n").strip("\r")
-            banner_con.close()
-        except Exception:
-            pass 
+        with print_lock:
+            try:
+                banner_con = banner_sock.connect((targets, port))
+                banner = banner_sock.recv(1024).decode().strip("\n").strip("\r")
+                banner_con.close()
+            except Exception:
+                pass 
         print("[*] Port " + str(port) + " is open" + ": " + banner)
         con.close()    
     except Exception:

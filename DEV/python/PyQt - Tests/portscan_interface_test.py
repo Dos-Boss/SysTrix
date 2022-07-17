@@ -1,4 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QFrame
 import sts
 
 class Ui_MainWindow(object):
@@ -17,6 +18,7 @@ class Ui_MainWindow(object):
                                         "gridline-color: rgb(46, 156, 60);\n"
                                         "color: rgb(255, 255, 255);")
         self.pushButton.setObjectName("pushButton")
+        self.pushButton.frameGeometry()
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(130, 0, 371, 151))
         self.label.setStyleSheet("")
@@ -42,6 +44,8 @@ class Ui_MainWindow(object):
                                         "gridline-color: rgb(255, 0, 0);")
         self.textBrowser.setAcceptRichText(True)
         self.textBrowser.setObjectName("textBrowser")
+        self.textBrowser.setFrameShape(QFrame.WinPanel)
+        self.textBrowser.setFrameShadow(QFrame.Sunken)
         self.textBrowser.setTextColor(QtGui.QColor('#26be00'))
         self.textBrowser.setText("""⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠛⠛⠋⠉⠈⠉⠉⠉⠉⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⢿⣿⣿⣿⣿
@@ -83,7 +87,8 @@ class Ui_MainWindow(object):
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setGeometry(QtCore.QRect(130, 160, 281, 31))
         self.lineEdit.setStyleSheet("background-color: rgb(30,30,30);\n"
-                                    "color: rgb(255, 255, 255);")
+                                    "color: rgb(255, 255, 255);\n"
+                                    "border-color: rgb(40, 40, 40);")
         self.lineEdit.setObjectName("lineEdit")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
