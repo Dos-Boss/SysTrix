@@ -1,3 +1,15 @@
+#!/usr/bin/env python3
+
+# - Brendan McCann 
+# - Original python2 codebase "Black Hat Python -  Justin Seitz and Tim Arnold ")
+# - Conceived - 18/07/22
+# - Packet Sniffer
+
+# TODO
+# Thread this bitch
+# Clean up output (ASCII/Hex?)
+# WHY TEH FUCK is WIN11 not running this?!
+
 import socket
 import os
 
@@ -14,7 +26,7 @@ sniffer = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket_protocol)
 
 sniffer.bind((host, 0))
 
-# we want the IP headers included in the capture
+# Include IP Headers
 sniffer.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
 
 # if we're on Windows we need to send an IOCTL
