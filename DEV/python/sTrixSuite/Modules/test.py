@@ -2,7 +2,7 @@ import socket
 import os
 
 # host to listen on
-host = "127.0.0.1"
+host = "192.168.20.8"
 
 # create a raw socket and bind it to the public interface
 if os.name == "nt":
@@ -23,7 +23,8 @@ if os.name == "nt":
     sniffer.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
 
 # read in a single packet
-print(sniffer.recvfrom(65565))
+while True:
+    print(sniffer.recvfrom(65565))
 
 # if we're on Windows turn off promiscuous mode
 if os.name == "nt":
