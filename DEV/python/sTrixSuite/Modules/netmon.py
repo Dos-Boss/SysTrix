@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+# - dalemueller
+# - Conceived - 15/07/22
+# - Network monitor
+
 import psutil
 import time
 
