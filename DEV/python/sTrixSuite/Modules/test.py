@@ -22,7 +22,7 @@ sniffer.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
 if os.name == "nt": 
     sniffer.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
 
-# read in a single packet
+# read in ALL THE PACKETS
 while True:
     print(sniffer.recvfrom(65565))
 
