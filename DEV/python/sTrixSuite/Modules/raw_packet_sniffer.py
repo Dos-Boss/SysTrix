@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # - Brendan McCann 
-# - Original python2 codebase "Black Hat Python -  Justin Seitz and Tim Arnold ")
+# - Original python2 codebase "Black Hat Python -  Justin Seitz and Tim Arnold "
 # - Conceived - 18/07/22
 # - Packet Sniffer
 
